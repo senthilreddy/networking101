@@ -8,6 +8,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/vagrant", :owner => "vagrant"
   config.vm.network :private_network, ip: "192.168.33.10"
   config.vm.provider "virtualbox" do |v|
-      v.customize ["modifyvm", :id, "--memory", 3092, "--cpus", 2, "--name", "network-lab"]
+      v.customize ["modifyvm", :id, "--memory", 4096, "--cpus", 2, "--name", "network-lab"]
   end
 end
